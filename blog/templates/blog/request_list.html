@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for list in lists %}
+  <div class="post">
+    <div class="date">
+      {{ post.published_date }}
+    </div>
+    <h1><a href="{% url 'request_detail' pk=list.pk %}">{{ list.Название }}</a></h1>
+     <p>{{ list.Форма_выпуска|linebreaksbr }}</p>
+     <p>{{ list.Дозировка|linebreaksbr }}</p>
+     <p>{{ list.Ваш_email_или_номер_телефона|linebreaksbr }}</p>
+  </div>
+{% endfor %}
+{% endblock %}

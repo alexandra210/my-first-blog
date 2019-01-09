@@ -10,7 +10,12 @@
         {% if user.is_authenticated %}
           <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <h1>{{ post.Название }}</h1>
+        <p>{{ post.Форма_выпуска|linebreaksbr }}</p>
+        <p>{{ post.Способ_применения|linebreaksbr }}</p>
+        <p>{{ post.Противопоказания|linebreaksbr }}</p>
+        <p>{{ post.Выдача|linebreaksbr }}</p>
+        <p>{{ post.Срок_годности|linebreaksbr }}</p>
+        <p>{{ post.Наличие|linebreaksbr }}</p>
     </div>
 {% endblock %}

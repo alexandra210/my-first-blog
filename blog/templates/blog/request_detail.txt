@@ -1,0 +1,16 @@
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ list.published_date }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+          <a class="btn btn-default" href="{% url 'request_edit' pk=list.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+        <h1>{{ list.Название }}</h1>
+        <p>{{ list.Форма_выпуска|linebreaksbr }}</p>
+        <p>{{ list.Дозировка|linebreaksbr }}</p>
+        <p>{{ list.Ваш_email_или_номер_телефона|linebreaksbr }}</p>
+    </div>
+{% endblock %}

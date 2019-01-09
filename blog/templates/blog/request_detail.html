@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ list.published_date }}
+            </div>
+        {% endif %}
+          <h1>Спасибо за Вашу заявку! Форма успешно отправлена фармацевту. В ближайшее время с вами свяжутся.</h1>
+    </div>
+{% endblock %}

@@ -3,19 +3,19 @@ h1 a {
     font-family: 'Lobster';
 }
 
-body {
+ body {
     padding-left: 15px;
 }
 
 .page-header {
-    background-color: #ff9400;
+    background-color: #BA55D3;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
-    font-size: 36pt;
+    font-size: 38pt;
     text-decoration: none;
 }
 
