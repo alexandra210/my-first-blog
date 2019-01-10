@@ -7,8 +7,16 @@ from .forms import RequestForm
 from django.shortcuts import redirect
 
 def post_list(request):
-    posts = Medicine.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    search_query = request.GET.get('search', '')
+
+    if search_query:
+        posts = Medicine.objects.filter(Название__icontains=search_query)
+    else:
+        posts = Medicine.objects.order_by('Название')
+        
     return render(request, 'blog/post_list.html', {'posts': posts})
+
+
 
 def request_list(request):
     lists = Request.objects.filter(published_date__lte=timezone.now()).order_by('published_date')

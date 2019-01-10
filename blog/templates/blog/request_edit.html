@@ -2,6 +2,7 @@
 
 {% block content %}
     <h1>Заполните предложенную вам форму</h1>
+    <h2>Если вам не важна дозировка препарата, в соответствующее поле внесите пометку <i>"любая"</i>.</h2>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>

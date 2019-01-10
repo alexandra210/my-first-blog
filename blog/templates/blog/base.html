@@ -4,8 +4,7 @@
       <title>Аптека</title>
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-      <link href ="https://fonts.googleapis.com/css?family=Playfair-Display&subsets=latin,cyrillic" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
@@ -14,7 +13,11 @@
           <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {%  endif %}
         <a href="{% url 'request_new' %}" class="top-menu"><span class="glyphicon glyphicon-envelope"></span></a>
+        <form class="search" action="{% url 'post_list' %}">
+          <input class="search-form" type="search" placeholder="Поиск" aria-label="Поиск" name="search">
+        </form>
         <h1><a href="/">"Аптека"</a></h1>
+        <h2>*На нашем сайте Вы можете воспользоваться поиском. Если необходимого препарата не окажется в базе данных, Вы можете отправить заявку фармацевту, нажав на <i>"конвертик"</i>   в правом верхнем углу сайта.</h2>
     </div>
     <div class="content container">
         <div class="row">
